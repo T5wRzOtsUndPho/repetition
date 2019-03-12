@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            width: 100%;
+        }
+        .sky{
+            width: 1000px;
+            height: 400px;
+            background-color: dodgerblue;
+        }
+
+        .ground{
+            width: 1000px;
+            height: 400px;
+            background-color: olivedrab;
+        }
+
+        .house{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 400px;
+            top: 300px;
+        }
+
+        .house .roof{
+            width: 0px;
+            height: 0px;
+            margin: 0 auto;
+            border: 80px solid transparent;
+            border-bottom: 80px solid crimson;
+        }
+
+        .house .wall{
+            background-color: darkorange;
+            width: 100px;
+            height: 100px;
+            margin-left: 50px;
+        }
+
+        .cloud{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 30px;
+            top: 40px;
+
+            animation-name: slideRight;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            visibility: visible !important;
+            animation-iteration-count:infinite;
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-200px);
+            }
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+
+        .cloud .big {
+            position: relative;
+            left: 40px;
+            background-color: white;
+            border-radius: 50px;
+            width: 0px;
+            height: 0px;
+            border: 50px solid white;
+        }
+        .cloud .small {
+            float: left;
+            position: relative;
+            top: 10px;
+            background-color: white;
+            border-radius: 40px;
+            width: 0px;
+            height: 0px;
+            border: 40px solid white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="sky">
+    <div class="cloud">
+        <div class="small"></div>
+        <div class="big"></div>
+    </div>
+</div>
+<div class="house">
+    <div class="roof"></div>
+    <div class="wall"></div>
+</div>
+<div class="ground"></div>
+
+</body>
+</html>
